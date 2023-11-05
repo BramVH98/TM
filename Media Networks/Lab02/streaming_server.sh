@@ -1,6 +1,6 @@
 #!/bin/bash
 echo -e "Updating";
-
+# do "sudo -i" first, also if you get bad interpreter error do "sed -i 's/\r$//' scriptname.sh"
 apt -qq -y update;
 apt -qq -y upgrade;
 
