@@ -4,16 +4,16 @@ echo -e "Updating";
 apt -qq -y update;
 apt -qq -y upgrade;
 
-echo -e "\n\nInstalling packages";
+echo -e "";
+echo -e "Installing required packages";
 
 apt -qq -y install nginx libnginx-mod-rtmp ffmpeg build-essential;
 
-echo -e "\n\nConfig NGINX";
-
+echo -e "";
+echo -e "Configuring NGINX";
 sleep 1;
-
-# Create the nginx.conf file with your configuration content
-echo "user www-data;
+echo -e "
+user www-data;
 worker_processes auto;
 pid /run/nginx.pid;
 include /etc/nginx/modules-enabled/*.conf;
@@ -23,89 +23,90 @@ events {
 }
 
 http {
-       sendfile on;
-       tcp_nopush on;
-       types_hash_max_size 2048;
 
-       include /etc/nginx/mime.types;
-       default_type application/octet-stream;
+        sendfile on;
+        tcp_nopush on;
+        types_hash_max_size 2048;
 
-       access_log /var/log/nginx/access.log;
-       error_log /var/log/nginx/error.log;
+        include /etc/nginx/mime.types;
+        default_type application/octet-stream;
 
-       gzip on;
+        access_log /var/log/nginx/access.log;
+        error_log /var/log/nginx/error.log;
 
-       include /etc/nginx/conf.d/*.conf;
-       include /etc/nginx/sites-enabled/*;
+        gzip on;
+
+        include /etc/nginx/conf.d/*.conf;
+        include /etc/nginx/sites-enabled/*;
 }
 
 rtmp {
-       include /etc/nginx/rtmpconf.d/*.conf;
-}" | tee /etc/nginx/nginx.conf;
+        include /etc/nginx/rtmpconf.d/*.conf;
+}
+" > nginx.conf;
+mv nginx.conf /etc/nginx/nginx.conf;
 
-# Ensure the file is owned by the correct user
-chown www-data:www-data /etc/nginx/nginx.conf
-
-# Move or copy any other required files or directories as needed
-
-
-echo -e "\nRTMP config";
-
+echo -e "Configuring RTMP";
 sleep 1;
-
 mkdir /etc/nginx/rtmpconf.d > /dev/null 2>&1;
+echo -e "
+server {
+        listen 1935;
+        chunk_size 4096;
 
-# Create the stream.conf file with your configuration content
-echo 'server {
-    listen 1935;
-    chunk_size 4096;
+        application live {
+              live on;
+              record off;
 
-    application live {
-        live on;
-        record off;
-        push rtmp://localhost/dash/;
-        push rtmp://localhost/hls/;
-    }
+              push rtmp://localhost/dash/;
+              push rtmp://localhost/hls/;
+        }
 
-    application hls {
-        allow publish 127.0.0.1;
-        deny publish all;
-        live on;
-        record all;
-        record path /var/www/html/rec;
-        exec_record_done ffmpeg -y -i $path -acodec libmp3lame -ar 44100 -ac 1 -vcodec libx264 /var/www/html/rec/$basename.mp4 -vframes 1 /var/www/html/rec/$basename.jpg;
-        hls on;
-        hls_path /var/www/html/hls;
-        hls_fragment 3;
-        hls_playlist_length 60;
-    }
+        application hls {
+              allow publish 127.0.0.1;
+              deny publish all;
 
-    application dash {
-        allow publish 127.0.0.1;
-        deny publish all;
-        live on;
-        record off;
-        dash on;
-        dash_path /var/www/html/dash;
-    }
+              live on;
+              record all;
+              record_path /var/www/html/rec;
+              exec_record_done ffmpeg -y -i \$path -acodec libmp3lame -ar 44100 -ac 1 -vcodec libx264 /var/www/html/rec/\$basename.mp4 -vframes 1 /var/www/html/rec/\$basename.jpg;
 
-    application vod {
-        play /var/www/html/rec;
-    }
-}' | tee /etc/nginx/rtmpconf.d/stream.conf;
+              hls on;
+              hls_path /var/www/html/hls;
+              hls_fragment 3;
+              hls_playlist_length 60;
+        }
+        application dash {
+              allow publish 127.0.0.1;
+              deny publish all;
 
-echo -e "\nHTML stuff happening now";
+              live on;
+              record off;
 
+              dash on;
+              dash_path /var/www/html/dash;
+        }
+        application vod {
+              play /var/www/html/rec;
+        }
+}
+" > streaming.conf;
+mv streaming.conf /etc/nginx/rtmpconf.d;
+
+echo -e "Creating HTML-folders";
 sleep 1;
-
 rm -R /var/www/html/* > /dev/null 2>&1;
 
 mkdir /var/www/html/hls;
 mkdir /var/www/html/dash;
 mkdir /var/www/html/rec;
 
-find /var/www/html -type d -exec chmod 777 {} \;
+chmod 777 /var/www/html;
+chmod 777 /var/www/html/hls;
+chmod 777 /var/www/html/dash;
+chmod 777 /var/www/html/rec;
 
+echo -e "Downloading HTML-files";
 sleep 1;
 
 wget https://raw.githubusercontent.com/dust555/MediaNetworks/main/HttpStreaming/dash.all.js > /dev/null 2>&1;
@@ -122,38 +123,72 @@ mv hls.html /var/www/html > /dev/null 2>&1;
 mv hls.js /var/www/html > /dev/null 2>&1;
 mv hls.php /var/www/html > /dev/null 2>&1;
 
-echo -e "\n";
- #this is without ssl certificates as a test
- 
-# Create the Nginx server block configuration file with your content
-echo 'server {
+echo -e "";
+echo -e "
+    # Please see /usr/share/doc/nginx-doc/examples/ for more detailed examples.
+
+server {
         listen 80 default_server;
         listen [::]:80 default_server;
 
+        # SSL configuration
+        #
+        # listen 443 ssl default_server;
+        # listen [::]:443 ssl default_server;
+        #
+        # Note: You should disable gzip for SSL traffic.
+        # See: https://bugs.debian.org/773332
+        #
+        # Read up on ssl_ciphers to ensure a secure configuration.
+        # See: https://bugs.debian.org/765782
+        #
+        # Self signed certs generated by the ssl-cert package
+        # Don't use them in a production server!
+        #
+        # include snippets/snakeoil.conf;
+
         root /var/www/html;
 
+        # Add index.php to the list if you are using PHP
         index index.html index.htm index.nginx-debian.html;
 
         server_name _;
 
         location / {
-            try_files $uri $uri/ =404;
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files \$uri \$uri/ =404;
         }
         location ~* \.(?:html)$ {
-            add_header Cache-Control: public;
+                add_header Cache-Control: public;
         }
         location ~* \.(?:jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc)$ {
-            expires 1M;
-            add_header Cache-Control: public;
+                expires 1M;
+                add_header Cache-Control: public;
         }
         location ~* \.(?:css|js)$ {
-            expires 1y;
-            add_header Cache-Control: public;
+                expires 1y;
+                add_header Cache-Control: public;
         }
-}' | sudo tee /etc/nginx/sites-available/default;
 
+        # pass PHP scripts to FastCGI server
+        #
+        #location ~ \.php$ {
+        #       include snippets/fastcgi-php.conf;
+        #
+        #       # With php-fpm (or other unix sockets):
+        #       fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+        #       # With php-cgi (or other tcp sockets):
+        #       fastcgi_pass 127.0.0.1:9000;
+        #}
 
-echo -e "\nRestarting NGINX";
+        # if apache concurs with nginx
+        #location ~ /\.ht {
+        #       deny all;
+        #}
+}" > /etc/nginx/sites-available/default;
 
-sudo systemctl restart nginx;
+echo "";
+echo -e "Restarting nginx";
+systemctl restart nginx;
 exit 0;
