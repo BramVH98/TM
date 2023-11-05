@@ -1,54 +1,46 @@
 #!/bin/bash
-
-read -rp "Give server IP: " IP;
-
+read -rp "Enter server-IP (not the proxy): " IP;
 echo -e "Updating";
+apt -qq -y update;
+apt -qq -y upgrade;
 
-sudo apt -qq -y update;
-sudo apt -qq -y upgrade;
+echo -e "";
+echo -e "Installing required packages";
+apt -qq -y install nginx;
 
-echo -e "\nInstalling stuff";
-
-sudo apt -qq -y install nginx;
-
-echo -e "\nConfiguring";
-
+echo -e "";
+echo -e "Configuring NGINX";
 sleep 1;
-
 echo -e "
-#nginx-proxy
-proxy_cache_path /var/www/cache levels=1:2 keys_zone=my_cache:10m 
+# nginx-proxy
+proxy_cache_path /var/www/cache levels=1:2 keys_zone=my_cache:10m
 max_size=10g
 inactive=60m use_temp_path=off;
 
 server {
         listen 80 default_server;
         listen [::]:80 default_server;
-		add_header X-CACHE-STATUS \$UPSTREAM_CACHE_STATUS;
-		proxy_set_header X-REQUEST-ID \$REQUEST_ID;
-		
-		index index.html index.htm index.nginx-debian.html;
-		
-		server_name _;
-		
-		location / {
-		        proxy_cache my_cache;
-				proxy_cache_valid 200 301 302;
-				proxy_pass http://$IP;
-		}
+        add_header X-CACHE-STATUS \$UPSTREAM_CACHE_STATUS;
+        proxy_set_header X-REQUEST-ID \$REQUEST_ID;
+
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name _;
+
+        location / {
+                proxy_cache my_cache;
+                proxy_cache_valid 200 301 302;
+                proxy_pass http://$IP;
+        }
 }" > default;
+mv default /etc/nginx/sites-available/default;
 
-sudo mv default /etc/nginx/sites-available/default;
-
-echo -e "\nProxy folder creation";
-
+echo -e "Creating Proxy-folder";
 sleep 1;
+mkdir /var/www/proxy;
+chmod 777 /var/www/proxy;
 
-sudo mkdir /var/www/proxy;
-sudo chmod 777 /var/www/proxy;
-
-echo -e "\nNginx restart";
-
-sudo systemctl restart nginx;
-
+echo "";
+echo -e "Restarting nginx";
+systemctl restart nginx;
 exit 0;
