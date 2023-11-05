@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./video-js.css" />
+    <link rel="stylesheet" href="./custom.css" />
+</head>
+
+<body class="body">
+    <div class="wrapper">
+        <h1 class="input_Title">Live Stream</h1>
+        <div class="input">
+            <h1>Enter the video name you want:</h1>
+            <input placeholder="No extensions" type="text" name="playbackName" id="playbackName" />
+        </div>
+        <button class="button_loadvideo" id="playbackInput">Load video</button>
+        <video class="video" id="playbackVideo" src="http://172.28.2.64/rec/Test.mp4" controls></video>
+
+        <h1 class="video-js_Title">Live</h1>
+        <video id="my-video" class="video-js" controls preload="auto" poster="./poster.jpg" data-setup="{}">
+            <source id="stream_ID" src="http://172.28.2.64/hls/Test.m3u8" type="application/vnd.apple.mpegurl" />
+        </video>
+    </div>
+    <script>
+        document.getElementById('playbackInput').addEventListener('click', function () {
+            let videoName = "http://172.28.2.64/rec/" + document.getElementById('playbackName').value + ".mp4";
+            let thumbnail = "http://172.28.2.64/rec/" + document.getElementById('playbackName').value + ".jpg";
+            document.getElementById('playbackVideo').setAttribute('src', videoName);
+            document.getElementById('playbackVideo').setAttribute('poster', thumbnail);
+        });
+    </script>
+    <script src="./video.min.js"></script>
+</body>
+
+</html>
