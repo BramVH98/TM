@@ -1,4 +1,5 @@
 #!/bin/bash
+# do "sudo -i" first, also if you get bad interpreter error do "sed -i 's/\r$//' scriptname.sh"
 read -rp "Enter server-IP (not the proxy): " IP;
 echo -e "Updating";
 apt -qq -y update;
