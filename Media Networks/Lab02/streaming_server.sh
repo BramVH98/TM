@@ -7,13 +7,13 @@ sudo apt -qq -y upgrade;
 
 echo -e "\n\nInstalling packages";
 
-sudo apt -qq -y install nginx libngix-mod-rtmp ffmpeg build-essential;
+sudo apt -qq -y install nginx libnginx-mod-rtmp ffmpeg build-essential;
 
 echo -e "\n\nConfig NGINX";
 
 sleep 1;
 
-echo -e "
+sudo echo -e "
 user www-data;
 worker_processes auto;
 pid /run/nginx.pid;
@@ -54,7 +54,7 @@ sleep 1;
 
 sudo mkdir /etc/nginx/rtmpconf.d > /dev/null 2>&1;
 
-echo -e "
+sudo echo -e "
 server {
          listen 1935;
 		 chunk_size 4096;
