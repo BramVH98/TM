@@ -1,35 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-
+!DOCTYPE html>
+<html>
 <head>
-    <link rel="stylesheet" href="./video-js.css" />
-    <link rel="stylesheet" href="./custom.css" />
+    <title>Video Player</title>
 </head>
+<body>
+    <video id="videoPlayer" controls autoplay>
+        <!-- You can specify a default video source here -->
+        <source src="default.mp4" type="video/mp4">
+    </video>
 
-<body class="body">
-    <div class="wrapper">
-        <h1 class="input_Title">Live Stream</h1>
-        <div class="input">
-            <h1>Enter the video name you want:</h1>
-            <input placeholder="No extensions" type="text" name="playbackName" id="playbackName" />
-        </div>
-        <button class="button_loadvideo" id="playbackInput">Load video</button>
-        <video class="video" id="playbackVideo" src="http://172.28.2.64/rec/Test.mp4" controls></video>
-
-        <h1 class="video-js_Title">Live</h1>
-        <video id="my-video" class="video-js" controls preload="auto" poster="http://172.28.2.64/rec/poster.jpg" data-setup="{}">
-            <source id="stream_ID" src="http://172.28.2.64/hls/Test.m3u8" type="application/vnd.apple.mpegurl" />
-        </video>
-    </div>
     <script>
-        document.getElementById('playbackInput').addEventListener('click', function () {
-            let videoName = "http://172.28.2.64/rec/" + document.getElementById('playbackName').value + ".mp4";
-            let thumbnail = "http://172.28.2.64/rec/" + document.getElementById('playbackName').value + ".jpg";
-            document.getElementById('playbackVideo').setAttribute('src', videoName);
-            document.getElementById('playbackVideo').setAttribute('poster', thumbnail);
-        });
-    </script>
-    <script src="./video.min.js"></script>
-</body>
+        // Function to get the value of a GET variable from the URL
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
 
+        // Get the value of the 'video' GET variable from the URL
+        var videoSource = getParameterByName('video');
+
+        if (videoSource) {
+            // Set the video source based on the 'video' GET variable
+            var videoPlayer = document.getElementById('videoPlayer');
+            videoPlayer.src = 'recordings/' + videoSource;
+            videoPlayer.load();
+        }
+    </script>
+</body>
 </html>
