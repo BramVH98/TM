@@ -100,6 +100,8 @@ echo -e "Creating HTML-folders";
 sleep 1;
 rm -R /var/www/html/* > /dev/null 2>&1;
 
+mv "$currect_dir/index.html" /var/www/html/index.html;
+
 mkdir /tmp/recordings;
 mkdir /var/www/html/hls;
 mkdir /var/www/html/dash;
