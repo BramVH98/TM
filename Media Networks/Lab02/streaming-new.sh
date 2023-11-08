@@ -82,7 +82,7 @@ rtmp {
                         hls_playlist_length 60;
                         record all;
                         record_path /var/www/html/recordings;
-                        record_max size 1K;
+                        record_max_size 1K;
                         record_unique on;
                         exec_record_done ffmpeg -y -i $path -acodec libmp3lame -ar 44100 -ac 1 -vcodec libx264 $dirname/$basename.mp4;
                 }
