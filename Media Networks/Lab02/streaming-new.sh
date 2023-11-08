@@ -1,6 +1,8 @@
 #!/bin/bash
 echo -e "Updating";
 # do "sudo -i" first, also if you get bad interpreter error do "sed -i 's/\r$//' scriptname.sh"
+# execute this from the git clone folder (for mv index.html)
+currect_dir=$(pwd)
 apt -qq -y update;
 apt -qq -y upgrade;
 
