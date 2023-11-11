@@ -15,7 +15,8 @@ for i = 2,201 do
     io.write("\necho STARTMODE=\\'hotplug\\' >> ifcfg-vlan"..i)
     io.write("\necho NETMASK=\\'255.255.255.240\\' >> ifcfg-vlan"..i)
     io.write("\necho ZONE=public >> ifcfg-vlan"..i)
-    io.write("\necho VLAN=\\'yes\\' >> ifcfg-vlan"..i.."\n")
+    io.write("\necho VLAN=\\'yes\\' >> ifcfg-vlan"..i)
+    io.write("\necho ETHERDEVICE=\\'eth1\\' >> ifcfg-vlan"..i.."\n")
     
     octet4 = octet4 + 16
 end
