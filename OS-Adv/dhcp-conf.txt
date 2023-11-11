@@ -1,0 +1,800 @@
+echo subnet 10.0.0.0 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.0.3 10.0.0.14;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.0.2;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.0.16 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.0.19 10.0.0.30;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.0.18;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.0.32 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.0.35 10.0.0.46;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.0.34;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.0.48 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.0.51 10.0.0.62;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.0.50;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.0.64 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.0.67 10.0.0.78;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.0.66;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.0.80 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.0.83 10.0.0.94;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.0.82;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.0.96 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.0.99 10.0.0.110;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.0.98;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.0.112 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.0.115 10.0.0.126;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.0.114;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.0.128 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.0.131 10.0.0.142;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.0.130;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.0.144 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.0.147 10.0.0.158;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.0.146;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.0.160 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.0.163 10.0.0.174;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.0.162;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.0.176 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.0.179 10.0.0.190;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.0.178;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.0.192 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.0.195 10.0.0.206;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.0.194;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.0.208 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.0.211 10.0.0.222;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.0.210;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.0.224 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.0.227 10.0.0.238;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.0.226;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.0.240 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.0.243 10.0.0.254;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.0.242;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.1.0 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.1.3 10.0.1.14;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.1.2;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.1.16 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.1.19 10.0.1.30;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.1.18;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.1.32 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.1.35 10.0.1.46;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.1.34;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.1.48 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.1.51 10.0.1.62;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.1.50;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.1.64 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.1.67 10.0.1.78;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.1.66;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.1.80 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.1.83 10.0.1.94;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.1.82;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.1.96 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.1.99 10.0.1.110;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.1.98;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.1.112 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.1.115 10.0.1.126;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.1.114;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.1.128 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.1.131 10.0.1.142;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.1.130;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.1.144 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.1.147 10.0.1.158;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.1.146;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.1.160 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.1.163 10.0.1.174;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.1.162;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.1.176 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.1.179 10.0.1.190;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.1.178;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.1.192 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.1.195 10.0.1.206;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.1.194;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.1.208 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.1.211 10.0.1.222;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.1.210;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.1.224 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.1.227 10.0.1.238;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.1.226;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.1.240 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.1.243 10.0.1.254;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.1.242;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.2.0 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.2.3 10.0.2.14;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.2.2;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.2.16 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.2.19 10.0.2.30;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.2.18;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.2.32 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.2.35 10.0.2.46;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.2.34;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.2.48 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.2.51 10.0.2.62;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.2.50;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.2.64 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.2.67 10.0.2.78;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.2.66;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.2.80 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.2.83 10.0.2.94;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.2.82;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.2.96 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.2.99 10.0.2.110;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.2.98;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.2.112 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.2.115 10.0.2.126;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.2.114;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.2.128 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.2.131 10.0.2.142;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.2.130;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.2.144 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.2.147 10.0.2.158;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.2.146;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.2.160 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.2.163 10.0.2.174;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.2.162;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.2.176 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.2.179 10.0.2.190;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.2.178;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.2.192 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.2.195 10.0.2.206;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.2.194;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.2.208 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.2.211 10.0.2.222;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.2.210;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.2.224 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.2.227 10.0.2.238;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.2.226;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.2.240 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.2.243 10.0.2.254;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.2.242;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.3.0 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.3.3 10.0.3.14;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.3.2;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.3.16 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.3.19 10.0.3.30;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.3.18;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.3.32 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.3.35 10.0.3.46;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.3.34;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.3.48 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.3.51 10.0.3.62;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.3.50;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.3.64 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.3.67 10.0.3.78;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.3.66;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.3.80 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.3.83 10.0.3.94;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.3.82;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.3.96 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.3.99 10.0.3.110;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.3.98;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.3.112 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.3.115 10.0.3.126;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.3.114;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.3.128 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.3.131 10.0.3.142;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.3.130;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.3.144 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.3.147 10.0.3.158;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.3.146;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.3.160 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.3.163 10.0.3.174;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.3.162;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.3.176 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.3.179 10.0.3.190;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.3.178;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.3.192 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.3.195 10.0.3.206;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.3.194;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.3.208 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.3.211 10.0.3.222;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.3.210;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.3.224 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.3.227 10.0.3.238;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.3.226;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.3.240 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.3.243 10.0.3.254;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.3.242;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.4.0 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.4.3 10.0.4.14;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.4.2;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.4.16 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.4.19 10.0.4.30;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.4.18;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.4.32 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.4.35 10.0.4.46;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.4.34;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.4.48 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.4.51 10.0.4.62;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.4.50;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.4.64 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.4.67 10.0.4.78;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.4.66;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.4.80 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.4.83 10.0.4.94;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.4.82;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.4.96 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.4.99 10.0.4.110;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.4.98;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.4.112 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.4.115 10.0.4.126;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.4.114;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.4.128 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.4.131 10.0.4.142;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.4.130;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.4.144 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.4.147 10.0.4.158;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.4.146;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.4.160 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.4.163 10.0.4.174;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.4.162;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.4.176 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.4.179 10.0.4.190;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.4.178;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.4.192 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.4.195 10.0.4.206;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.4.194;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.4.208 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.4.211 10.0.4.222;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.4.210;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.4.224 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.4.227 10.0.4.238;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.4.226;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.4.240 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.4.243 10.0.4.254;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.4.242;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.5.0 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.5.3 10.0.5.14;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.5.2;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.5.16 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.5.19 10.0.5.30;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.5.18;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.5.32 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.5.35 10.0.5.46;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.5.34;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.5.48 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.5.51 10.0.5.62;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.5.50;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.5.64 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.5.67 10.0.5.78;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.5.66;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.5.80 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.5.83 10.0.5.94;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.5.82;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.5.96 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.5.99 10.0.5.110;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.5.98;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.5.112 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.5.115 10.0.5.126;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.5.114;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.5.128 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.5.131 10.0.5.142;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.5.130;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.5.144 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.5.147 10.0.5.158;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.5.146;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.5.160 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.5.163 10.0.5.174;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.5.162;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.5.176 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.5.179 10.0.5.190;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.5.178;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.5.192 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.5.195 10.0.5.206;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.5.194;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.5.208 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.5.211 10.0.5.222;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.5.210;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.5.224 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.5.227 10.0.5.238;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.5.226;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.5.240 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.5.243 10.0.5.254;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.5.242;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.6.0 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.6.3 10.0.6.14;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.6.2;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.6.16 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.6.19 10.0.6.30;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.6.18;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.6.32 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.6.35 10.0.6.46;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.6.34;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.6.48 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.6.51 10.0.6.62;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.6.50;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.6.64 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.6.67 10.0.6.78;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.6.66;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.6.80 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.6.83 10.0.6.94;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.6.82;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.6.96 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.6.99 10.0.6.110;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.6.98;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.6.112 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.6.115 10.0.6.126;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.6.114;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.6.128 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.6.131 10.0.6.142;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.6.130;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.6.144 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.6.147 10.0.6.158;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.6.146;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.6.160 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.6.163 10.0.6.174;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.6.162;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.6.176 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.6.179 10.0.6.190;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.6.178;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.6.192 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.6.195 10.0.6.206;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.6.194;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.6.208 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.6.211 10.0.6.222;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.6.210;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.6.224 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.6.227 10.0.6.238;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.6.226;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.6.240 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.6.243 10.0.6.254;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.6.242;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.7.0 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.7.3 10.0.7.14;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.7.2;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.7.16 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.7.19 10.0.7.30;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.7.18;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.7.32 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.7.35 10.0.7.46;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.7.34;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.7.48 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.7.51 10.0.7.62;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.7.50;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.7.64 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.7.67 10.0.7.78;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.7.66;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.7.80 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.7.83 10.0.7.94;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.7.82;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.7.96 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.7.99 10.0.7.110;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.7.98;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.7.112 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.7.115 10.0.7.126;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.7.114;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.7.128 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.7.131 10.0.7.142;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.7.130;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.7.144 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.7.147 10.0.7.158;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.7.146;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.7.160 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.7.163 10.0.7.174;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.7.162;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.7.176 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.7.179 10.0.7.190;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.7.178;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.7.192 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.7.195 10.0.7.206;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.7.194;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.7.208 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.7.211 10.0.7.222;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.7.210;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.7.224 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.7.227 10.0.7.238;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.7.226;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.7.240 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.7.243 10.0.7.254;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.7.242;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.8.0 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.8.3 10.0.8.14;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.8.2;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.8.16 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.8.19 10.0.8.30;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.8.18;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.8.32 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.8.35 10.0.8.46;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.8.34;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.8.48 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.8.51 10.0.8.62;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.8.50;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.8.64 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.8.67 10.0.8.78;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.8.66;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.8.80 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.8.83 10.0.8.94;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.8.82;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.8.96 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.8.99 10.0.8.110;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.8.98;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.8.112 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.8.115 10.0.8.126;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.8.114;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.8.128 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.8.131 10.0.8.142;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.8.130;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.8.144 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.8.147 10.0.8.158;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.8.146;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.8.160 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.8.163 10.0.8.174;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.8.162;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.8.176 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.8.179 10.0.8.190;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.8.178;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.8.192 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.8.195 10.0.8.206;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.8.194;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.8.208 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.8.211 10.0.8.222;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.8.210;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.8.224 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.8.227 10.0.8.238;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.8.226;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.8.240 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.8.243 10.0.8.254;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.8.242;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.9.0 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.9.3 10.0.9.14;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.9.2;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.9.16 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.9.19 10.0.9.30;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.9.18;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.9.32 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.9.35 10.0.9.46;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.9.34;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.9.48 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.9.51 10.0.9.62;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.9.50;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.9.64 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.9.67 10.0.9.78;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.9.66;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.9.80 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.9.83 10.0.9.94;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.9.82;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.9.96 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.9.99 10.0.9.110;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.9.98;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.9.112 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.9.115 10.0.9.126;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.9.114;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.9.128 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.9.131 10.0.9.142;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.9.130;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.9.144 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.9.147 10.0.9.158;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.9.146;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.9.160 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.9.163 10.0.9.174;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.9.162;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.9.176 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.9.179 10.0.9.190;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.9.178;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.9.192 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.9.195 10.0.9.206;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.9.194;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.9.208 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.9.211 10.0.9.222;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.9.210;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.9.224 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.9.227 10.0.9.238;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.9.226;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.9.240 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.9.243 10.0.9.254;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.9.242;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.10.0 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.10.3 10.0.10.14;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.10.2;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.10.16 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.10.19 10.0.10.30;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.10.18;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.10.32 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.10.35 10.0.10.46;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.10.34;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.10.48 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.10.51 10.0.10.62;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.10.50;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.10.64 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.10.67 10.0.10.78;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.10.66;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.10.80 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.10.83 10.0.10.94;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.10.82;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.10.96 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.10.99 10.0.10.110;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.10.98;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.10.112 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.10.115 10.0.10.126;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.10.114;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.10.128 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.10.131 10.0.10.142;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.10.130;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.10.144 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.10.147 10.0.10.158;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.10.146;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.10.160 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.10.163 10.0.10.174;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.10.162;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.10.176 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.10.179 10.0.10.190;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.10.178;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.10.192 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.10.195 10.0.10.206;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.10.194;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.10.208 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.10.211 10.0.10.222;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.10.210;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.10.224 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.10.227 10.0.10.238;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.10.226;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.10.240 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.10.243 10.0.10.254;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.10.242;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.11.0 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.11.3 10.0.11.14;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.11.2;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.11.16 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.11.19 10.0.11.30;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.11.18;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.11.32 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.11.35 10.0.11.46;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.11.34;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.11.48 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.11.51 10.0.11.62;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.11.50;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.11.64 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.11.67 10.0.11.78;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.11.66;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.11.80 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.11.83 10.0.11.94;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.11.82;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.11.96 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.11.99 10.0.11.110;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.11.98;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.11.112 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.11.115 10.0.11.126;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.11.114;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.11.128 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.11.131 10.0.11.142;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.11.130;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.11.144 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.11.147 10.0.11.158;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.11.146;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.11.160 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.11.163 10.0.11.174;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.11.162;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.11.176 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.11.179 10.0.11.190;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.11.178;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.11.192 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.11.195 10.0.11.206;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.11.194;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.11.208 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.11.211 10.0.11.222;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.11.210;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.11.224 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.11.227 10.0.11.238;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.11.226;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.11.240 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.11.243 10.0.11.254;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.11.242;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.12.0 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.12.3 10.0.12.14;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.12.2;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.12.16 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.12.19 10.0.12.30;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.12.18;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.12.32 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.12.35 10.0.12.46;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.12.34;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.12.48 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.12.51 10.0.12.62;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.12.50;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.12.64 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.12.67 10.0.12.78;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.12.66;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.12.80 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.12.83 10.0.12.94;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.12.82;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.12.96 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.12.99 10.0.12.110;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.12.98;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
+echo subnet 10.0.12.112 netmask 255.255.255.240 '{' >> /etc/dhcpd.conf
+echo "    range dynamic-bootp 10.0.12.115 10.0.12.126;" >> /etc/dhcpd.conf
+echo "    option routers 10.0.12.114;" >> /etc/dhcpd.conf
+echo } >> /etc/dhcpd.conf
