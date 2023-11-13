@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#to use this script properly, add it as a cronjob(every 5 minutes)
+
 current_ip="" #this is the ip that should be replaced
 
 check_ip_addr="" #this is the ip that will be checked and taken up if it doesn't respond
