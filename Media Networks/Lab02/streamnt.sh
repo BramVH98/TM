@@ -3,8 +3,8 @@
 apt update -y
 apt upgrade -y
 apt install -y build-essential ffmpeg libpcre3 libpcre3-dev libssl-dev zlib1g-dev
-apt install nginx
-apt install libnginx-mod-rtmp
+apt install nginx -y
+apt install libnginx-mod-rtmp -y
 
 systemctl stop nginx
 systemctl start nginx
@@ -99,7 +99,7 @@ mkdir -p /var/www/html/recordings;
 chmod 777 /var/www/html/recordings;
 
 echo -e "
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Video Player</title>
