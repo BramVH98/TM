@@ -40,18 +40,18 @@ http {
             root /usr/share/nginx/html;
             index index.html index.htm;
             proxy_cache my_cache;
-            proxy_pass http://172.28.2.66:8080;
+            proxy_pass http://172.26.2.66:8080;
         }
 
         location ~* \.(m3u8)$ {
             proxy_cache off;
             expires -1;
-            proxy_pass http://172.28.2.66:8080;
+            proxy_pass http://172.26.2.66:8080;
             include /etc/nginx/hls_proxy_params.conf;
         }
 
         location ~* \.(ts)$ {
-            proxy_pass http://172.28.2.66:8080;
+            proxy_pass http://172.2.26.66:8080;
             proxy_cache my_cache;
             proxy_cache_key $request_uri;
             proxy_cache_valid 200 10s;
