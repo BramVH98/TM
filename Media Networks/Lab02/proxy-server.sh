@@ -1,69 +1,46 @@
 #!/bin/bash
+read -rp "Enter server-IP (not the proxy): " IP
+echo -e "Updating"
+apt -qq -y update
+apt -qq -y upgrade
 
-apt update -y
-apt upgrade -y
-apt install nginx -y
+echo -e ""
+echo -e "Installing required packages"
+apt -qq -y install nginx
 
+echo -e ""
+echo -e "Configuring NGINX"
+sleep 1
 echo -e "
-user www-data;
-worker_processes auto;
-pid /run/nginx.pid;
+#nginx-proxy
+proxy_cache_path /var/www/cache levels=1:2 keys_zone=my_cache:10m
+max_size=10g
+inactive=60m use_temp_path=off
 
-events {
-    worker_connections 768;
-    # multi_accept on;
-}
+server {
+        listen 80 default_server
+        listen [::]:80 default_server
+        add_header X-CACHE-STATUS \$UPSTREAM_CACHE_STATUS
+        proxy_set_header X-REQUEST-ID \$REQUEST_ID
 
-http {
-    sendfile on;
-    tcp_nopush on;
-    tcp_nodelay on;
-    keepalive_timeout 65;
-    types_hash_max_size 2048;
+        index index.html index.htm index.nginx-debian.html
 
-    include /etc/nginx/mime.types;
-    default_type application/octet-stream;
-
-    access_log /var/log/nginx/access.log;
-    error_log /var/log/nginx/error.log;
-
-    gzip on;
-    gzip_disable "msie6";
-
-    proxy_cache_path "/opt/ramcache" levels=1:2 keys_zone=my_cache:10m max_size=10g inactive=60m use_temp_path=off;
-
-    server {
-        listen 80;
-        server_name localhost;
+        server_name _
 
         location / {
-            root /usr/share/nginx/html;
-            index index.html index.htm;
-            proxy_cache my_cache;
-            proxy_pass http://172.26.2.66:8080;
+                proxy_cache my_cache
+                proxy_cache_valid 200 301 302
+                proxy_pass http://$IP
         }
+}" > default;
+mv default /etc/nginx/sites-available/default
 
-        location ~* \.(m3u8)$ {
-            proxy_cache off;
-            expires -1;
-            proxy_pass http://172.26.2.66:8080;
-            include /etc/nginx/hls_proxy_params.conf;
-        }
+echo -e "Creating Proxy-folder"
+sleep 1
+mkdir /var/www/proxy
+chmod 777 /var/www/proxy
 
-        location ~* \.(ts)$ {
-            proxy_pass http://172.2.26.66:8080;
-            proxy_cache my_cache;
-            proxy_cache_key $request_uri;
-            proxy_cache_valid 200 10s;
-            proxy_cache_lock on;
-            proxy_cache_lock_timeout 5s;
-            proxy_cache_lock_age 5s;
-            include /etc/nginx/hls_proxy_params.conf;
-        }
-    }
-
-    include /etc/nginx/conf.d/*.conf;
-    include /etc/nginx/sites-enabled/*;
-}
-" > /etc/nginx/nginx.conf
-exit 0;
+echo ""
+echo -e "Restarting nginx"
+systemctl restart nginx
+exit 0
