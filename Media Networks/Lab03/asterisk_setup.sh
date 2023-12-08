@@ -5,6 +5,7 @@ sudo apt -qq update;
 sudo apt -qq upgrade;
 sudo apt -qq install asterisk;
 
+cd /etc/asterisk
 # sip-config
 sudo mv sip.conf sip.conf.bak >/dev/null 2>&1;
 
