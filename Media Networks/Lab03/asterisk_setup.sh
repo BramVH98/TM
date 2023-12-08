@@ -154,7 +154,7 @@ same => n,Dial(SIP/provider/\${EXTEN})
 same => n,Hangup()
 
 [phones]"
-} > exentions.conf;
+} > extensions.conf;
 
 # voicemail default config
 {
