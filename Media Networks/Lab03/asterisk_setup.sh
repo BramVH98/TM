@@ -33,8 +33,10 @@ do
         echo -e "language=nl" >> sip.conf;
         
         sudo wget "https://raw.githubusercontent.com/BramVH98/TM/main/Media%20Networks/Lab03/AsteriskNederlandstaligeAudiobestanden.7z"
-        sudo apt -qq install unzip;
-        sudo unzip "AsteriskNederlandstaligeAudiobestanden.7z";
+        #sudo apt -qq install unzip;
+        #sudo unzip "AsteriskNederlandstaligeAudiobestanden.7z";
+		sudo apt -qq install p7zip-full;
+		7z x AsteriskNederlandstaligeAudiobestanden.7z
         sudo rm -R /usr/share/asterisk/sounds/nl >/dev/null 2>&1;
         sudo mv "AsteriskNederlandstaligeAudiobestanden" "nl";
         sudo mv "nl" "/usr/share/asterisk/sounds";
@@ -106,7 +108,7 @@ same => n,GoTo(mainmenu,s,1)
 
 [mainmenu]
 exten => s,1,NoOp(keuzemenu taal, autoattendent)
-same => n,Set(TIMEOUTS=0)
+same => n,Set(TIMEOUTS=0) 
 same => n,Answer()
 same => n(loop),Background(keuzetaal)
 same => n,WaitExten(5) 
@@ -118,7 +120,9 @@ exten => i,1,NoOp(ongeldige keuze)
 same => n,GoTo(s,1)
 
 exten => t,1,NoOp(Timeout)
-same => n,Set(TIMEOUTS=$[ \${TIMEOUTS} + 1 ])
+#same => n,Set(TIMEOUTS=$[ \${TIMEOUTS} + 1 ]) 
+same => n,Set(TIMEOUTS=$((TIMEOUTS + 1)))
+
 same => n,GotoIf($[ \${TIMEOUTS} < 2 ]?s,loop)
 same => n,Queue(queue1,,,,100)
 
@@ -238,3 +242,4 @@ sudo systemctl restart asterisk
 echo "";
 echo "Done";
 exit;
+
